@@ -1,0 +1,83 @@
+/* Reset & Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 600 16px/1.4 'Open Sans', sans-serif;
+    background: #e7e7e7;
+    color: #7e83a0;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+/* Header Container */
+.header {
+    width: 100%;
+    max-width: 1200px;
+    background: rgba(40, 57, 101, 0.82); /* Matches login-html background */
+    border-radius: 25px;
+    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.24), 0 17px 50px rgba(0, 0, 0, 0.19);
+    padding: 20px 30px;
+}
+
+/* Navigation Menu */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    list-style: none;
+}
+
+/* Menu Items */
+.menu-item {
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+.menu-item-a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 18px;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+    min-width: 120px;
+    text-align: center;
+}
+
+.menu-item-a:hover {
+    background: #1161ee;
+    color: #ffffff;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.menu-item-a i {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #b5a8d5;
+}
+
+.menu-item-text {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
