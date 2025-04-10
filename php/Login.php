@@ -18,7 +18,7 @@ if (!$email || !$password) {
     exit;
 }
 
-$result = $conn->query("SELECT UID, Name, PasswordHash, Role FROM Users WHERE Email = '$email'");
+$result = $conn->query("SELECT UID, Name, PasswordHash, uniID, Role FROM Users WHERE Email = '$email'");
 if ($result->num_rows === 0) {
     echo json_encode(["success" => false, "message" => "User not found"]);
     exit;
@@ -26,11 +26,11 @@ if ($result->num_rows === 0) {
 
 $user = $result->fetch_assoc();
 if (password_verify($password, $user["PasswordHash"])) {
-    // You can optionally start a session here
     echo json_encode([
         "success" => true,
         "name" => $user["Name"],
         "uid" => $user["UID"],
+        "uniID" => $user["uniID"],
         "role" => $user["Role"]
     ]);
 } else {

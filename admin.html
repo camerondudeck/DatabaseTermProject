@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Events@Uni</title>
+    <link href="css/admin.css" rel="stylesheet">
+    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/admin.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-title">Events@Uni</div>
+            <div class="header-buttons">
+                <button class="refresh-icon" onclick="refreshPage()" title="Refresh Content">
+                    <i class='bx bx-refresh'></i>
+                </button>
+                <button onclick="goToEvents()">Events</button>
+                <button onclick="goToAdmin()">Admin Dashboard</button>
+                <button onclick="logoutUser()">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h1>Admin Dashboard</h1>
+            <div style="display: flex; gap: 12px;">
+                <button onclick="showEventForm()">Manage Events</button>
+                <button onclick="showRSOForm()">Manage RSOs</button>
+            </div>
+        </div>
+
+        <section id="eventSection">
+            <section class="card">
+                <h2>Create Event</h2>
+                <form id="createEventForm">
+                    <input type="text" id="eventName" placeholder="Event Name" required><br>
+                    <textarea id="eventDescription" placeholder="Description" required></textarea><br>
+                    <input type="date" id="eventDate" required>
+                    <input type="time" id="eventTime" required><br>
+                    <input type="text" id="eventLocation" placeholder="Location Name" required><br>
+                    <input type="text" id="contactEmail" placeholder="Contact Email" required>
+                    <input type="text" id="contactPhone" placeholder="Contact Phone" required><br>
+
+                    <select id="eventVisibility" required>
+                        <option value="">Select Visibility</option>
+                        <option value="public">Public</option>
+                        <option value="private">Private (your university only)</option>
+                        <option value="rso">RSO Only</option>
+                    </select><br>
+
+                    <select id="rsoSelect">
+                        <option value="">Select RSO</option>
+
+                    </select><br>
+
+                    <button type="submit">Create Event</button>
+                </form>
+            </section>
+
+            <section class="card">
+                <h2>Your Events</h2>
+                <div id="adminEventsList">
+
+                </div>
+            </section>
+        </section>
+
+        <section class="card" id="rsoSection" style="display: none;">
+            <h2>Create New RSO</h2>
+            <form id="createRSOForm">
+                <input type="text" id="rsoName" placeholder="RSO Name" required>
+                <input type="text" id="rsoDescription" placeholder="RSO Description" required>
+                <input type="text" id="memberEmails" placeholder="Member Emails (comma-separated)" required>
+                <button type="submit">Create RSO</button>
+            </form>
+            <p id="rsoMessage" style="margin-top: 10px;"></p>
+        </section>
+    </main>
+</body>
+
+</html>

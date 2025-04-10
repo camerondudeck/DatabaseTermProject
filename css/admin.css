@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.header-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+}
+
+.header-buttons button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.05em;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.header-buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.refresh-icon {
+    font-size: 1.4em;
+    padding: 6px 8px;
+}
+
+.refresh-icon:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+form button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background-color 0.2s ease;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+.row {
+    display: flex;
+    gap: 16px;
+    margin: 8px 0;
+}
+
+.row>* {
+    flex: 1;
+}
+
+#adminEventsList .event-card {
+    background: #f9f9f9;
+    border-left: 4px solid #3498db;
+    padding: 16px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.event-card h3 {
+    margin: 0 0 6px;
+}
+
+.event-card p {
+    margin: 4px 0;
+}
+
+.section-toggle {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.section-toggle:hover {
+    background-color: #2980b9;
+}
+
+#rsoSection {
+    background: white;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+#rsoSection h2 {
+    margin-bottom: 1rem;
+}
+
+#rsoSection form input {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+#rsoSection form button {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background-color 0.2s ease;
+}
+
+#rsoSection form button:hover {
+    background-color: #27ae60;
+}
+
+#rsoMessage {
+    margin-top: 10px;
+    color: #e74c3c;
+}

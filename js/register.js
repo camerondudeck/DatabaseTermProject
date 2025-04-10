@@ -29,17 +29,17 @@ function registerUser() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, password, uniID })
     })
-    .then(res => res.json())
-    .then(data => {
-        if (data.success) {
-            alert("Registration successful!");
-            location.reload();
-        } else {
-            alert("Registration failed: " + data.message);
-        }
-    })
-    .catch(err => {
-        console.error(err);
-        alert("An error occurred during registration.");
-    });
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                alert("Registration successful!");
+                location.reload();
+            } else {
+                alert("Registration failed: " + data.message);
+            }
+        })
+        .catch(err => {
+            console.error(err);
+            alert("An error occurred during registration.");
+        });
 }
